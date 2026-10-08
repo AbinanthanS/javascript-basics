@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéAPI Fetch Explorer</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">API & JSON 03</span>
+            <h1>Live PokéAPI REST Explorer</h1>
+            <p class="subtitle">Real-world asynchronous API data fetching with <code>async/await</code>, JSON parsing, and dynamic UI updates.</p>
+        </header>
+
+        <div class="pokedex-card">
+            <div class="search-section">
+                <input type="text" id="pokemon-name-input" placeholder="Enter Pokémon name or ID (e.g. pikachu)..." value="pikachu">
+                <button id="btn-fetch-pokemon" class="btn btn-search">Search Pokémon</button>
+            </div>
+
+            <div class="quick-picks">
+                <span>Quick Picks:</span>
+                <button class="pill-btn" data-pokemon="pikachu">⚡ Pikachu</button>
+                <button class="pill-btn" data-pokemon="charizard">🔥 Charizard</button>
+                <button class="pill-btn" data-pokemon="gengar">👻 Gengar</button>
+                <button class="pill-btn" data-pokemon="mewtwo">🔮 Mewtwo</button>
+            </div>
+
+            <div id="status-message" class="status-message hidden"></div>
+
+            <div id="pokemon-display" class="pokemon-display">
+                <div class="sprite-wrapper">
+                    <img id="pokemon-sprite" src="" alt="Pokemon Sprite" class="sprite-img">
+                </div>
+                <div class="pokemon-info">
+                    <h2 id="pokemon-title">Pikachu</h2>
+                    <div id="types-container" class="types-container"></div>
+                    <div class="stats-grid">
+                        <div class="stat-box"><span class="label">ID:</span> <strong id="stat-id">#25</strong></div>
+                        <div class="stat-box"><span class="label">Height:</span> <strong id="stat-height">0.4 m</strong></div>
+                        <div class="stat-box"><span class="label">Weight:</span> <strong id="stat-weight">6.0 kg</strong></div>
+                        <div class="stat-box"><span class="label">Base XP:</span> <strong id="stat-xp">112</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events Playground</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">Events Module 01</span>
+            <h1>Mouse Events & User Interaction</h1>
+            <p class="subtitle">Experience <code>click</code>, <code>dblclick</code>, <code>mouseover</code>, <code>mouseout</code>, <code>mousedown</code>, and <code>mouseup</code> in real-time.</p>
+        </header>
+
+        <div class="interactive-stage">
+            <div id="interactive-box" class="interactive-box">
+                <span class="box-icon">🖱️</span>
+                <span id="box-label" class="box-label">Hover or Click Me!</span>
+                <span id="event-tag" class="event-tag">Idle</span>
+            </div>
+
+            <div class="controls-panel">
+                <button id="trigger-btn" class="action-btn">
+                    <span>Target Trigger Button</span>
+                    <small>Hover, Press & Click here</small>
+                </button>
+
+                <div class="stats-card">
+                    <h3>Event Counter Tracker</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item"><span class="label">Clicks:</span> <strong id="cnt-click">0</strong></div>
+                        <div class="stat-item"><span class="label">Hovers:</span> <strong id="cnt-hover">0</strong></div>
+                        <div class="stat-item"><span class="label">Mouse Outs:</span> <strong id="cnt-out">0</strong></div>
+                        <div class="stat-item"><span class="label">Mouse Downs:</span> <strong id="cnt-down">0</strong></div>
+                    </div>
+                </div>
+
+                <div id="mouse-log" class="console-box">Event listener ready...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

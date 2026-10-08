@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events & Game Movement</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">Events Module 02</span>
+            <h1>Keyboard Events & Player Movement</h1>
+            <p class="subtitle">Use <strong>Arrow Keys</strong> or <strong>W, A, S, D</strong> to navigate the avatar inside the arena.</p>
+        </header>
+
+        <div class="game-wrapper">
+            <!-- Game Arena -->
+            <div id="arena" class="arena">
+                <div id="player" class="player-avatar">
+                    <span id="player-face">:)</span>
+                </div>
+            </div>
+
+            <!-- Dashboard -->
+            <div class="dashboard">
+                <div class="card info-card">
+                    <h2>Live Telemetry</h2>
+                    <div class="stats-row">
+                        <div>Position X: <strong id="pos-x">0 px</strong></div>
+                        <div>Position Y: <strong id="pos-y">0 px</strong></div>
+                    </div>
+                    <div class="last-key">
+                        Last Key Pressed: <strong id="last-key">None</strong>
+                    </div>
+                </div>
+
+                <div class="card keys-guide">
+                    <h3>Controls Guide</h3>
+                    <div class="key-grid">
+                        <kbd>▲ / W</kbd> <span>Move Up</span>
+                        <kbd>▼ / S</kbd> <span>Move Down</span>
+                        <kbd>◄ / A</kbd> <span>Move Left</span>
+                        <kbd>► / D</kbd> <span>Move Right</span>
+                    </div>
+                    <button id="btn-reset-pos" class="btn">Reset Position (0, 0)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

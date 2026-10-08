@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selectors Demo</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">DOM Module 01</span>
+            <h1 id="main-title">DOM Element Selectors</h1>
+            <p class="subtitle">Interactive playground demonstrating all major DOM querying techniques in JavaScript.</p>
+        </header>
+
+        <main class="grid-layout">
+            <!-- Left Side: Interactive Target Elements -->
+            <section class="card target-area">
+                <h2>Target DOM Structure</h2>
+
+                <div id="msg" class="message-banner">Welcome to the DOM Playground!</div>
+
+                <h3>Fruits (Class: <code>.fruits</code>)</h3>
+                <div class="fruits-group">
+                    <div class="fruit-badge fruits">Apple</div>
+                    <div class="fruit-badge fruits">Orange</div>
+                    <div class="fruit-badge fruits">Mango</div>
+                </div>
+
+                <h3>Vegetables (Tag: <code>&lt;ul&gt; &lt;li&gt;</code>)</h3>
+                <ul id="vegetable-list">
+                    <li>Beets</li>
+                    <li>Carrots</li>
+                    <li>Potatoes</li>
+                </ul>
+
+                <h3>Legumes</h3>
+                <ul id="legume-list">
+                    <li>Broccoli</li>
+                    <li>Celery</li>
+                    <li>Onions</li>
+                </ul>
+            </section>
+
+            <!-- Right Side: Interactive Trigger Buttons -->
+            <section class="card controls-area">
+                <h2>Try Selectors Live</h2>
+                <div class="btn-grid">
+                    <button id="btn-id" class="btn">
+                        <span>1. getElementById</span>
+                        <small>Targets #msg</small>
+                    </button>
+                    <button id="btn-class" class="btn">
+                        <span>2. getElementsByClassName</span>
+                        <small>HTMLCollection (.fruits)</small>
+                    </button>
+                    <button id="btn-tag" class="btn">
+                        <span>3. getElementsByTagName</span>
+                        <small>HTMLCollection (&lt;li&gt;)</small>
+                    </button>
+                    <button id="btn-query" class="btn">
+                        <span>4. querySelector</span>
+                        <small>Single first match</small>
+                    </button>
+                    <button id="btn-query-all" class="btn">
+                        <span>5. querySelectorAll</span>
+                        <small>Static NodeList</small>
+                    </button>
+                    <button id="btn-reset" class="btn btn-outline">
+                        <span>🔄 Reset Styles</span>
+                        <small>Revert all changes</small>
+                    </button>
+                </div>
+
+                <h3>Console & Activity Output</h3>
+                <div id="output-log" class="console-box">Ready. Click any selector button above to test.</div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

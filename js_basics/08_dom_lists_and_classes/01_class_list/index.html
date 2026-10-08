@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassList API Demo</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">DOM Collections 01</span>
+            <h1>The element.classList API</h1>
+            <p class="subtitle">Manipulate CSS classes dynamically with <code>add()</code>, <code>remove()</code>, <code>toggle()</code>, <code>replace()</code>, and <code>contains()</code>.</p>
+        </header>
+
+        <div class="main-layout">
+            <section class="card showcase-card">
+                <h2>Target Elements</h2>
+                
+                <h1 id="demo-heading" class="target-heading">Interactive Heading</h1>
+
+                <div class="buttons-row">
+                    <button id="target-btn-1" class="demo-btn">Button Alpha</button>
+                    <button id="target-btn-2" class="demo-btn">Button Beta</button>
+                    <button id="target-btn-3" class="demo-btn">Button Gamma</button>
+                </div>
+
+                <div class="class-inspector">
+                    <h3>Active Classes Inspector</h3>
+                    <div id="inspector-output" class="inspector-output">Heading classes: [ target-heading ]</div>
+                </div>
+            </section>
+
+            <section class="card actions-card">
+                <h2>ClassList Operations</h2>
+                <div class="actions-grid">
+                    <button id="btn-add-enabled" class="op-btn">
+                        <span>.add("enabled")</span>
+                        <small>Apply vibrant blue style</small>
+                    </button>
+                    <button id="btn-toggle-glow" class="op-btn">
+                        <span>.toggle("glow")</span>
+                        <small>Turn glow shadow on/off</small>
+                    </button>
+                    <button id="btn-replace-class" class="op-btn">
+                        <span>.replace("enabled", "disabled")</span>
+                        <small>Swap active status</small>
+                    </button>
+                    <button id="btn-check-contains" class="op-btn">
+                        <span>.contains("disabled")</span>
+                        <small>Check if disabled is present</small>
+                    </button>
+                    <button id="btn-remove-all" class="op-btn op-btn-reset">
+                        <span>Reset All Classes</span>
+                        <small>Revert to clean defaults</small>
+                    </button>
+                </div>
+
+                <h3>Operation Feedback</h3>
+                <div id="feedback-log" class="console-box">Click any operation above.</div>
+            </section>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

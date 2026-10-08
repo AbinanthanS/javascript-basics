@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Image Visibility</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">Events Module 03</span>
+            <h1>Element Visibility & Display Modes</h1>
+            <p class="subtitle">Understand the fundamental differences between <code>visibility: hidden</code>, <code>display: none</code>, and <code>opacity: 0</code>.</p>
+        </header>
+
+        <div class="main-layout">
+            <div class="card display-card">
+                <div class="banner top-banner">Surrounding Top Content Box</div>
+                
+                <div class="image-stage">
+                    <img id="target-image" src="./Plane.jpeg" alt="Jet Aircraft" class="showcase-img">
+                </div>
+
+                <div class="banner bottom-banner">Surrounding Bottom Content Box (Watch how layout shifts!)</div>
+            </div>
+
+            <div class="card controls-card">
+                <h2>Toggle Strategy Controls</h2>
+                
+                <div class="buttons-stack">
+                    <button id="btn-toggle-visibility" class="btn btn-primary">
+                        <span>Toggle <code>visibility</code></span>
+                        <small>hidden vs visible (Preserves empty space)</small>
+                    </button>
+
+                    <button id="btn-toggle-display" class="btn btn-secondary">
+                        <span>Toggle <code>display</code></span>
+                        <small>none vs block (Collapses layout)</small>
+                    </button>
+
+                    <button id="btn-toggle-opacity" class="btn btn-accent">
+                        <span>Toggle <code>opacity</code></span>
+                        <small>0 vs 1 (Smooth animated fade)</small>
+                    </button>
+
+                    <button id="btn-reset-all" class="btn btn-outline">
+                        <span>Reset All Styles</span>
+                        <small>Restore default visible image</small>
+                    </button>
+                </div>
+
+                <div class="status-box">
+                    <h3>Current CSS State</h3>
+                    <div id="state-readout" class="state-readout">
+                        visibility: visible<br>
+                        display: block<br>
+                        opacity: 1
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

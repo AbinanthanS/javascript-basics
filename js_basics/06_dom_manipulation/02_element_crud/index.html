@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Element Creation & CRUD</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">DOM Module 02</span>
+            <h1>Creating, Inserting & Removing Elements</h1>
+            <p class="subtitle">Step-by-step interactive demonstration of <code>createElement</code>, <code>append</code>, <code>prepend</code>, <code>insertBefore</code>, and <code>remove</code>.</p>
+        </header>
+
+        <div class="main-grid">
+            <section class="card controls">
+                <h2>Element Controls</h2>
+                <div class="input-group">
+                    <label for="item-text">Item Content:</label>
+                    <input type="text" id="item-text" value="Fresh Coconut" placeholder="Enter item name...">
+                </div>
+
+                <div class="actions-grid">
+                    <button id="btn-append" class="btn btn-primary">
+                        <span>➕ append()</span>
+                        <small>Add to bottom of list</small>
+                    </button>
+                    <button id="btn-prepend" class="btn btn-primary">
+                        <span>⬆️ prepend()</span>
+                        <small>Add to top of list</small>
+                    </button>
+                    <button id="btn-insert-before" class="btn btn-accent">
+                        <span>📍 insertBefore()</span>
+                        <small>Insert above Banana</small>
+                    </button>
+                    <button id="btn-remove-last" class="btn btn-danger">
+                        <span>🗑️ remove()</span>
+                        <small>Remove last element</small>
+                    </button>
+                </div>
+
+                <h3>Activity Log</h3>
+                <div id="log-box" class="log-box">Ready. Choose an action above.</div>
+            </section>
+
+            <section class="card display-area">
+                <h2>Interactive DOM Tree</h2>
+                <p class="list-title">Ordered List: <code>&lt;ol id="fruits-list"&gt;</code></p>
+                
+                <ol id="fruits-list" class="styled-list">
+                    <li id="apple">Apple</li>
+                    <li id="orange">Orange</li>
+                    <li id="banana">Banana</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

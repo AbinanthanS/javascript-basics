@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching Local JSON Files</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">API & JSON 02</span>
+            <h1>Fetching Local JSON Data</h1>
+            <p class="subtitle">Demonstrates asynchronous data fetching with <code>fetch()</code>, <code>response.json()</code>, and dynamic DOM rendering.</p>
+        </header>
+
+        <div class="layout-grid">
+            <section class="card controls-card">
+                <h2>Choose JSON Source</h2>
+                <div class="buttons-stack">
+                    <button id="btn-fetch-person" class="btn btn-primary">
+                        <span>Fetch person.json</span>
+                        <small>Single detailed user object</small>
+                    </button>
+                    <button id="btn-fetch-people" class="btn btn-primary">
+                        <span>Fetch people.json</span>
+                        <small>Array of 4 team members</small>
+                    </button>
+                    <button id="btn-fetch-names" class="btn btn-primary">
+                        <span>Fetch names.json</span>
+                        <small>Simple array of names</small>
+                    </button>
+                </div>
+
+                <div class="tip-box">
+                    💡 <strong>Note:</strong> Browsers require a local HTTP server (like VS Code Live Server or Node http-server) to allow <code>fetch()</code> on local files due to CORS file protocol restrictions.
+                </div>
+            </section>
+
+            <section class="card display-card">
+                <h2>Fetched Data Output</h2>
+                <div id="render-target" class="render-target">
+                    <p class="placeholder-text">Click a button on the left to fetch and render JSON data.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

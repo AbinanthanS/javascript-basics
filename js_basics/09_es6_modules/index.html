@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Modules & Geometry Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">Modern JavaScript</span>
+            <h1>ES6 Modules (import & export)</h1>
+            <p class="subtitle">Clean, modular code loaded with <code>&lt;script type="module" src="./main.js"&gt;</code>.</p>
+        </header>
+
+        <div class="card calc-card">
+            <h2>Circle Geometry Calculator</h2>
+            <div class="input-row">
+                <label for="input-radius">Radius (cm):</label>
+                <input type="number" id="input-radius" value="5" min="0" step="0.5">
+                <button id="btn-calc" class="btn">Calculate</button>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-tile">
+                    <span class="label">Circumference (2πr)</span>
+                    <strong id="res-circum">31.42</strong>
+                    <small>cm</small>
+                </div>
+                <div class="result-tile">
+                    <span class="label">Surface Area (πr²)</span>
+                    <strong id="res-area">78.54</strong>
+                    <small>cm²</small>
+                </div>
+                <div class="result-tile">
+                    <span class="label">Sphere Volume (4/3 πr³)</span>
+                    <strong id="res-vol">523.60</strong>
+                    <small>cm³</small>
+                </div>
+            </div>
+
+            <div class="code-preview">
+                <h3>Exported Module Code (<code>math_utils.js</code>)</h3>
+                <pre><code>export const PI = 3.14159265359;
+export function getCircumference(radius) { return 2 * PI * radius; }
+export function getArea(radius) { return PI * radius * radius; }
+export function getSphereVolume(radius) { return (4/3) * PI * Math.pow(radius, 3); }</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notice type="module" -->
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

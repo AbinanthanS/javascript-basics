@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Navigation & Tree Traversal</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">DOM Module 03</span>
+            <h1>DOM Tree Traversal & Navigation</h1>
+            <p class="subtitle">Navigate parent, child, and sibling relationships across the DOM hierarchy.</p>
+        </header>
+
+        <div class="main-grid">
+            <section class="card controls">
+                <h2>Navigation Controls</h2>
+                <p class="active-indicator">Currently Focused: <strong id="current-focused">None (Click any node to focus)</strong></p>
+
+                <div class="buttons-grid">
+                    <button id="btn-parent" class="btn">
+                        <span>⬆️ .parentElement</span>
+                        <small>Navigate to parent container</small>
+                    </button>
+                    <button id="btn-first-child" class="btn">
+                        <span>⬇️ .firstElementChild</span>
+                        <small>Navigate to first child</small>
+                    </button>
+                    <button id="btn-last-child" class="btn">
+                        <span>⬇️ .lastElementChild</span>
+                        <small>Navigate to last child</small>
+                    </button>
+                    <button id="btn-prev-sibling" class="btn">
+                        <span>⬅️ .previousElementSibling</span>
+                        <small>Step to preceding sibling</small>
+                    </button>
+                    <button id="btn-next-sibling" class="btn">
+                        <span>➡️ .nextElementSibling</span>
+                        <small>Step to following sibling</small>
+                    </button>
+                    <button id="btn-children" class="btn">
+                        <span>✨ Highlight .children</span>
+                        <small>Highlight all direct children</small>
+                    </button>
+                </div>
+
+                <h3>Traversal Log</h3>
+                <div id="nav-log" class="log-box">Select an element to start navigating.</div>
+            </section>
+
+            <section class="card tree-view">
+                <h2>Interactive DOM Structure</h2>
+                <div class="category-block" id="fruits-group">
+                    <h4>Category: Fruits (id="fruits-group")</h4>
+                    <ul id="fruits">
+                        <li id="f1" class="nav-node">🍎 Apple</li>
+                        <li id="f2" class="nav-node">🍊 Orange</li>
+                        <li id="f3" class="nav-node">🍌 Banana</li>
+                    </ul>
+                </div>
+
+                <div class="category-block" id="veggies-group">
+                    <h4>Category: Vegetables (id="veggies-group")</h4>
+                    <ul id="vegetables">
+                        <li id="v1" class="nav-node">🥦 Broccoli</li>
+                        <li id="v2" class="nav-node">🥕 Carrot</li>
+                        <li id="v3" class="nav-node">🧅 Onion</li>
+                    </ul>
+                </div>
+
+                <div class="category-block" id="desserts-group">
+                    <h4>Category: Desserts (id="desserts-group")</h4>
+                    <ul id="desserts">
+                        <li id="d1" class="nav-node">🍰 Cake</li>
+                        <li id="d2" class="nav-node">🍨 Ice Cream</li>
+                        <li id="d3" class="nav-node">🥧 Apple Pie</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

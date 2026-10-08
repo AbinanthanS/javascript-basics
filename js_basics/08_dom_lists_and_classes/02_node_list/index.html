@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeList Manipulation Demo</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">DOM Collections 02</span>
+            <h1>NodeList Lifecycle & Static Behavior</h1>
+            <p class="subtitle">Understand why <code>querySelectorAll</code> returns a static NodeList and how to manipulate, add, and remove items.</p>
+        </header>
+
+        <div class="main-layout">
+            <section class="card stage-card">
+                <h2>Interactive Button Collection</h2>
+                <p class="hint">Click any button below to remove it from the DOM!</p>
+
+                <div id="buttons-container" class="buttons-container">
+                    <button class="node-btn">Button #1</button>
+                    <button class="node-btn">Button #2</button>
+                    <button class="node-btn">Button #3</button>
+                    <button class="node-btn">Button #4</button>
+                </div>
+            </section>
+
+            <section class="card controls-card">
+                <h2>NodeList Operations</h2>
+                
+                <div class="actions">
+                    <button id="btn-add-item" class="btn btn-primary">
+                        <span>➕ Add New Button</span>
+                        <small>Creates & appends button element</small>
+                    </button>
+                    <button id="btn-color-all" class="btn btn-secondary">
+                        <span>🎨 Color All (.forEach)</span>
+                        <small>Directly iterate with NodeList.forEach</small>
+                    </button>
+                    <button id="btn-reset-list" class="btn btn-outline">
+                        <span>🔄 Reset to Initial 4</span>
+                        <small>Restore default state</small>
+                    </button>
+                </div>
+
+                <div class="inspector-box">
+                    <h3>NodeList Status Telemetry</h3>
+                    <div class="telemetry">
+                        <div>Stored NodeList Count: <strong id="stored-count">4</strong></div>
+                        <div>Live DOM Elements Count: <strong id="dom-count">4</strong></div>
+                    </div>
+                </div>
+
+                <div id="node-log" class="console-box">Ready. Click buttons to remove them, or add new ones.</div>
+            </section>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
